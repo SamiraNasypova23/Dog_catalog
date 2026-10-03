@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Породы собак — каталог</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf6ee;
+    color: #2b2b2b;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* Шапка */
+  header {
+    background: #fffdf8;
+    border-bottom: 1px solid #e8e0d0;
+    padding: 26px 0;
+  }
+  .top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  h1 { font-size: 30px; color: #2f5fa3; letter-spacing: .5px; }
+  .slogan { color: #8a8272; font-style: italic; margin-top: 4px; font-size: 15px; }
+
+  /* Навигация по категориям */
+  nav { display: flex; flex-wrap: wrap; gap: 10px; }
+  nav a {
+    text-decoration: none;
+    color: #2f5fa3;
+    background: #eef4fc;
+    border: 1px solid #c9dbf2;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 15px;
+    transition: background .2s, color .2s;
+  }
+  nav a:hover { background: #2f5fa3; color: #fff; }
+
+  /* Баннер */
+  .banner {
+    background: linear-gradient(120deg, #dce9fa 0%, #f2e8d8 100%);
+    border-radius: 20px;
+    padding: 46px 40px;
+    margin: 36px 0;
+  }
+  .banner h2 { font-size: 26px; color: #24477e; margin-bottom: 10px; }
+  .banner p { color: #4a4a42; max-width: 560px; line-height: 1.6; }
+
+  /* Сетка карточек */
+  main h2 { font-size: 24px; color: #2b2b2b; margin-bottom: 20px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid #e8e0d0;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(47, 95, 163, .15); }
+  .card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+  .info { padding: 16px 18px 20px; }
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2f5fa3;
+    background: #eef4fc;
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+  }
+  .info h3 { font-size: 19px; margin-bottom: 4px; }
+  .info p { font-size: 14px; color: #8a8272; }
+
+  footer {
+    background: #24477e;
+    color: #cfdcf0;
+    text-align: center;
+    padding: 26px 0;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap top">
+    <div>
+      <h1>Породы собак</h1>
+      <p class="slogan">Каталог лучших друзей человека</p>
+    </div>
+    <nav>
+      <a href="#sluzhebnye">Служебные</a>
+      <a href="#ohotnichyi">Охотничьи</a>
+      <a href="#pastushyi">Пастушьи</a>
+      <a href="#dekorativnye">Декоративные</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="banner">
+    <h2>Найдите своего идеального пса</h2>
+    <p>Мы собрали популярные породы четырёх категорий: от верных служебных защитников до миниатюрных декоративных компаньонов. Выбирайте категорию или знакомьтесь с карточками ниже.</p>
+  </section>
+
+  <main>
+    <h2 id="catalog">Популярные породы</h2>
+    <section class="grid">
+
+      <a class="card" href="breeds/german-shepherd.html">
+        <img src="img/gsd.png" alt="Немецкая овчарка">
+        <div class="info">
+          <span class="tag" id="sluzhebnye">Служебные</span>
+          <h3>Немецкая овчарка</h3>
+          <p>Умный и преданный защитник</p>
+        </div>
+      </a>
+
+      <a class="card" href="breeds/doberman.html">
+        <img src="img/doberman.png" alt="Доберман">
+        <div class="info">
+          <span class="tag">Служебные</span>
+          <h3>Доберман</h3>
+          <p>Элегантный и бдительный страж</p>
+        </div>
+      </a>
+
+      <a class="card" href="breeds/labrador.html">
+        <img src="img/labrador.png" alt="Лабрадор-ретривер">
+        <div class="info">
+          <span class="tag" id="ohotnichyi">Охотничьи</span>
+          <h3>Лабрадор-ретривер</h3>
+          <p>Добродушный семейный любимец</p>
+        </div>
+      </a>
+
+      <a class="card" href="breeds/beagle.html">
+        <img src="img/beagle.png" alt="Бигль">
+        <div class="info">
+          <span class="tag">Охотничьи</span>
+          <h3>Бигль</h3>
+          <p>Весёлый следопыт с добрым нравом</p>
+        </div>
+      </a>
+
+      <a class="card" href="breeds/border-collie.html">
+        <img src="img/border_collie.png" alt="Бордер-колли">
+        <div class="info">
+          <span class="tag">Пастушьи</span>
+          <h3>Бордер-колли</h3>
+          <p>Самая умная овчарка мира</p>
+        </div>
+      </a>
+
+      <a class="card" href="breeds/australian-shepherd.html">
+        <img src="img/aussie.png" alt="Австралийская овчарка">
+        <div class="info">
+          <span class="tag">Пастушьи</span>
+          <h3>Австралийская овчарка</h3>
+          <p>Энергичный и яркий компаньон</p>
+        </div>
+      </a>
+
+      <a class="card" href="breeds/spitz.html">
+        <img src="img/spitz.png" alt="Померанский шпиц">
+        <div class="info">
+          <span class="tag">Декоративные</span>
+          <h3>Померанский шпиц</h3>
+          <p>Пушистый миниатюрный шарм</p>
+        </div>
+      </a>
+
+      <a class="card" href="breeds/chihuahua.html">
+        <img src="img/chihuahua.png" alt="Чихуахуа">
+        <div class="info">
+          <span class="tag">Декоративные</span>
+          <h3>Чихуахуа</h3>
+          <p>Смелый малыш с большим сердцем</p>
+        </div>
+      </a>
+
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">Породы собак · Каталог — сделано с любовью к четвероногим</div>
+</footer>
+
+</body>
+</html>
